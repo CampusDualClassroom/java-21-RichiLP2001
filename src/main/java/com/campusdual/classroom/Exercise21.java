@@ -1,9 +1,6 @@
 package com.campusdual.classroom;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Exercise21 {
 
@@ -61,23 +58,37 @@ public class Exercise21 {
     }
 
     public static void main(String[] args) {
-        createHashSet();
+        Set<String> ElHashSet = (createHashSet());
         System.out.println("Contenido del HashSet: ");
-        printSet(createHashSet());
+        printSet(ElHashSet);
         System.out.println("=========================");
         System.out.println("Añadiendo elemento al Hashset: ");
-        boolean addedToHashSet = addElementToSet(createHashSet(),"ELEMENTO AAA");
-        System.out.println("Elemento añadido: " + addedToHashSet);
+        boolean nuevoElemento1 = addElementToSet(ElHashSet,"ELEMENTO AAA");
+        System.out.println("Elemento añadido: " + nuevoElemento1);
+        System.out.println("Nuevo contenido del Hashset: ");
+        printSet(ElHashSet);
+
+        System.out.println("Añadiendo elemento al Hashset: ");
+        boolean nuevoElemento2 = addElementToSet(ElHashSet,"ELEMENTO AAA");
+        System.out.println("Elemento añadido: " + nuevoElemento2);
+        System.out.println("Nuevo contenido del Hashset: ");
+        printSet(ElHashSet);
 
         //TREESET
         System.out.println("\n=========================\n ");
 
-        createTreeSet();
+        Set<String> elTreeSet = createTreeSet();
         System.out.println("\nContenido del TreeSet: ");
-        printSet(createTreeSet());
+        printSet(elTreeSet);
         System.out.println("Añadiendo elemento al TreeSet: ");
-        boolean addedToTreeSet = addElementToSet(createTreeSet(),"ELEMENTO AAA");
+        boolean addedToTreeSet = addElementToSet(elTreeSet,"ELEMENTO AAA");
         System.out.println("Elemento añadido: " + addedToTreeSet);
+        printSet(elTreeSet);
+        System.out.println("añadir otro elemento: ");
+        addElementToSet(elTreeSet,"ELEMENTO AAA");
+        boolean nuevoElemento =addElementToSet(elTreeSet,"ELEMENTO AAA");
+        System.out.println("Elemento añadido: " + nuevoElemento);
+
 
 
 
